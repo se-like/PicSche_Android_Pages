@@ -42,27 +42,31 @@
 <p><strong>(1) 送信される情報</strong></p>
 <ul>
   <li>ユーザーが選択・撮影した画像</li>
-  <li>画像解析のための指示</li>
+  <li>画像解析のための指示（画像の文脈説明用の「画像捕捉欄」で入力したテキストを含みます）</li>
 </ul>
 
 <p><strong>(2) 送信目的</strong><br>
 予定情報（タイトル、日時、場所、補足事項）をAIによって自動抽出するため</p>
 
-<p><strong>(3) 利用するAIサービス</strong></p>
+<p><strong>(3) 画像捕捉欄について</strong><br>
+画像捕捉欄で入力した内容は、そのまま選択されたAIプロバイダーに送信されます。個人情報（氏名・住所・電話番号・メールアドレス等）や機密情報を入力しないようご注意ください。入力は500文字までに制限されています。</p>
+
+<p><strong>(4) 利用するAIサービス</strong></p>
 <p>本アプリは、以下のAIサービスを利用する場合があります：</p>
 <ul>
   <li>Anthropic Claude API（<a href="https://www.anthropic.com/privacy">https://www.anthropic.com/privacy</a>）</li>
+  <li>Google Gemini API（<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>）</li>
   <li>その他、高精度な画像解析が可能なAIサービス</li>
 </ul>
-<p>利用するサービスは、機能向上のため予告なく変更される場合があります。</p>
+<p>利用するサービスは、設定（AIプロバイダー）および機能向上のため予告なく変更される場合があります。</p>
 
-<p><strong>(4) データの取り扱い</strong></p>
+<p><strong>(5) データの取り扱い</strong></p>
 <ul>
   <li>画像はAPI解析完了後、各AIサービス提供者のポリシーに従って処理されます</li>
-  <li>本アプリが利用するClaude API（Anthropic）では、API経由で送信されたデータをモデル学習に利用しない方針とされています。詳細は各AIサービス提供者のプライバシーポリシーをご確認ください</li>
+  <li>本アプリが利用するClaude API（Anthropic）では、API経由で送信されたデータをモデル学習に利用しない方針とされています。Gemini API（Google）のデータ取り扱いについては、Google のプライバシーポリシーをご確認ください。詳細は各AIサービス提供者のプライバシーポリシーをご確認ください</li>
 </ul>
 
-<p><strong>(5) 個人情報の保護</strong><br>
+<p><strong>(6) 個人情報の保護</strong><br>
 本アプリがAIに抽出を依頼する項目は、予定のタイトル・日時・場所・メモに限られ、氏名・住所・電話番号等を専用項目として抽出することはありません。ただし、画像内のテキストがタイトルやメモにそのまま含まれる可能性があり、完全に防ぐことは保証できません。</p>
 
 <h2>【2-2. 広告サービス（AdMob）の利用】</h2>
@@ -151,7 +155,7 @@
 
 <p class="updated">最終更新日：2025年2月7日</p>
 
-<p class="footer">PicSche開発者：cloudcrowd</p>
+<p class="footer">PicSche開発者：CloudCrowd</p>
 
 </body>
 </html>
