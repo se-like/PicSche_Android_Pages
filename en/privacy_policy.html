@@ -18,6 +18,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
+<p class="updated">Last updated: February 12, 2026</p>
 
 <p>PicSche (the "App") respects your privacy and is committed to protecting your personal information. This Privacy Policy explains what information the App collects and how it is used and protected.</p>
 
@@ -43,6 +44,7 @@ Storage: Extracted schedule data is held temporarily in memory and is deleted af
 <ul>
   <li>Images you select or capture</li>
   <li>Instructions for image analysis (including text you enter in the "image context" field)</li>
+  <li>For the free plan, we manage usage counts on our server. A device-derived identifier (based on Android ID; it does not identify individuals) is sent to our API, and usage count, reward-grant count, and the relevant month are stored on our server. This allows usage limits to carry over on the same device after reinstall.</li>
 </ul>
 
 <p><strong>(2) Purpose</strong><br>
@@ -52,46 +54,32 @@ To automatically extract schedule information (title, date/time, location, notes
 Content you enter in the image context field is sent to the selected AI provider as-is. Please do not enter personal information (name, address, phone number, email, etc.) or confidential information. Input is limited to 500 characters.</p>
 
 <p><strong>(4) AI Services Used</strong></p>
-<p>The App may use the following AI services:</p>
+<p>The App performs AI analysis using one of the following, depending on the provider selected at build time:</p>
 <ul>
   <li>Anthropic Claude API (<a href="https://www.anthropic.com/privacy">https://www.anthropic.com/privacy</a>)</li>
   <li>Google Gemini API (<a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a>)</li>
-  <li>Other AI services capable of accurate image analysis</li>
+  <li>Our own API using Vertex AI: images and prompts are sent to our API (e.g. Google Cloud Run), which uses Google Cloud Vertex AI for analysis. Processing is subject to Google Cloud's privacy notice (<a href="https://cloud.google.com/terms/cloud-privacy-notice">https://cloud.google.com/terms/cloud-privacy-notice</a>).</li>
 </ul>
-<p>Services used may be changed without notice (e.g. AI provider setting or App improvement).</p>
+<p>The service used depends on the App's build configuration. Supported providers may change without notice for improvements.</p>
 
 <p><strong>(5) Data Handling</strong></p>
 <ul>
-  <li>Images are processed according to each AI service provider's policy after analysis</li>
-  <li>The Claude API (Anthropic) used by the App does not use data sent via the API for model training under its published policy. For Gemini API (Google), see Google's Privacy Policy. For details, see each provider's privacy policy</li>
+  <li>Images are deleted from the server immediately after API analysis</li>
+  <li>Processing is in accordance with each AI service provider's privacy policy</li>
+  <li>The App is configured so that user data is not used for AI training purposes</li>
 </ul>
 
 <p><strong>(6) Protection of Personal Information</strong><br>
-The App only asks the AI to extract schedule fields (title, date/time, location, notes) and does not request extraction of name, address, phone number, or other dedicated personal-identification fields. However, text visible in the image may appear in titles or notes, and we cannot guarantee complete prevention.</p>
+The App instructs the AI to extract only schedule-related fields and not to extract personally identifiable information (name, address, phone number, etc.). However, we cannot guarantee complete prevention given the nature of image content.</p>
 
-<h2>2-2. Advertising (AdMob)</h2>
-<p>The App displays banner and reward ads via Google's AdMob service when you use the free plan.</p>
-
-<p><strong>(1) Information collected or transmitted</strong></p>
-<p>AdMob (Google LLC) may collect the following for ad delivery:</p>
+<p><strong>(7) Advertising (Google AdMob)</strong><br>
+When you use the free plan, the App uses Google AdMob (Google LLC) to display ads.</p>
 <ul>
-  <li>Advertising ID</li>
-  <li>Device information (model, OS version, etc.)</li>
-  <li>IP address</li>
-  <li>Other information as described in Google's Privacy Policy</li>
+  <li>Information that may be collected: device identifiers, advertising ID, IP address, app usage, etc. (as described in Google's Privacy Policy)</li>
+  <li>Purpose: To display and deliver ads and optimize ad delivery</li>
+  <li>Google's Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></li>
+  <li>If you use the Basic or Premium plan, ads are not shown and the above data collection for ad delivery does not apply.</li>
 </ul>
-
-<p><strong>(2) Purpose</strong></p>
-<p>Optimization of ad delivery and display; detection of fraud; etc.</p>
-
-<p><strong>(3) Third-party policies</strong></p>
-<p>For details on how AdMob handles data, see Google's Privacy Policy: <a href="https://policies.google.com/privacy">https://policies.google.com/privacy</a></p>
-
-<p><strong>(4) Additional collection by the App</strong></p>
-<p>The App does not transmit personally identifiable information (name, email address, etc.) to AdMob for advertising purposes.</p>
-
-<h2>2-3. Usage limit management (free plan)</h2>
-<p>To enforce monthly usage limits for the free plan, the App may record usage counts on our backend server. In that case, the App sends a device-derived identifier (based on the device's Android ID; it does not include name, email address, or other personally identifying information) to the server to manage usage only within the month. This identifier remains the same for the same device after reinstall, so usage limits cannot be reset by reinstalling. Data is retained on the backend only as usage count and month information.</p>
 
 <h2>3. Use of Information</h2>
 <p>Collected information is used only for:</p>
@@ -100,10 +88,10 @@ The App only asks the AI to extract schedule fields (title, date/time, location,
   <li>Adding extracted events to the calendar</li>
   <li>Improving the App and fixing issues</li>
 </ul>
+<p>When using the free plan, device information etc. may be collected by Google AdMob for ad delivery and optimization. See "Third-Party Services" – Advertising above.</p>
 <p>The App does not use information for:</p>
 <ul>
-  <li>Additional data collection by the App for advertising (Note: AdMob may collect device information etc. for ad display. See "2-2. Advertising (AdMob)" above)</li>
-  <li>Tracking user behavior (except for analytics and improvement)</li>
+  <li>Tracking user behavior (except for ad optimization)</li>
   <li>Selling or providing data to third parties (except as required for AI analysis API and advertising services)</li>
 </ul>
 
@@ -113,14 +101,14 @@ The App only asks the AI to extract schedule fields (title, date/time, location,
   <li>Extracted schedule data: Deleted from the App after calendar registration</li>
   <li>Events added to the calendar: Stored in your device's calendar app until you delete them</li>
 </ul>
-<p>The App does not store user data on any server.</p>
+<p>The App does not store user data on any server, except that for free-plan usage management we store usage count, reward-grant count, and the relevant month linked to a device identifier on our server.</p>
 
 <h2>5. Data Sharing</h2>
 <p>The App does not share your information with third parties except:</p>
 <ul>
   <li>When required by law</li>
   <li>When you have given consent</li>
-  <li>As described in "Third-Party Services" and "2-2. Advertising (AdMob)" above</li>
+  <li>As described in "Third-Party Services" (AI analysis API use)</li>
 </ul>
 
 <h2>6. Security</h2>
@@ -129,8 +117,8 @@ The App only asks the AI to extract schedule fields (title, date/time, location,
   <li>Keeping images only temporarily (no permanent storage)</li>
   <li>Using encrypted API communication (HTTPS)</li>
   <li>Minimizing data kept in the App</li>
+  <li>Configuring AI services so that user data is not used for training</li>
 </ul>
-<p>The Claude API (Anthropic) used by the App does not use data sent via the API for model training under its published policy.</p>
 
 <h2>7. Your Rights</h2>
 <p>You have the right to:</p>
@@ -152,8 +140,6 @@ The App only asks the AI to extract schedule fields (title, date/time, location,
 
 <h2>11. Governing Law</h2>
 <p>This Privacy Policy is governed by and construed in accordance with the laws of Japan.</p>
-
-<p class="updated">Last updated: February 7, 2025</p>
 
 <p class="footer">PicSche developer: CloudCrowd</p>
 
