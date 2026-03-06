@@ -36,7 +36,7 @@
 <p><strong>(4) プッシュ通知用デバイス識別子</strong><br>
 目的：解析完了時に「解析が完了しました！」とプッシュ通知を送るため<br>
 保存：Google LLC が提供するクラウドサービスに、端末識別用のID（FCMトークン）と紐づけて保存されます。トークンは更新時に上書きされます。<br>
-無効化：Androidの「設定」→「アプリ」→「PicSche」→「通知」で通知をオフにすると、本アプリは新規の識別子登録を行いません。既に保存された識別子は、アプリ削除時などに当方の記録から削除されます。</p>
+無効化：Androidの「設定」→「アプリ」→「PicSche」→「通知」で通知をオフにすると、本アプリは新規の識別子登録を行いません。アプリ削除後は当該端末へ通知を送ることはありません。既存の識別子は、送信時に無効と判明した場合など、当方の運用に応じて記録から削除することがあります（アプリ削除のタイミングで自動的に削除されるわけではありません）。</p>
 
 <h2>【2. 第三者サービスの利用】</h2>
 <p>本アプリは、画像から予定情報を高精度で抽出するため、外部のAI解析サービスを利用しています。</p>
@@ -54,7 +54,7 @@
 <p><strong>(4) 利用するAIサービス</strong><br>
 本アプリは、画像から予定情報を抽出するために、以下のいずれか1つのAI解析サービスを利用します：<br>
 ・Anthropic Claude（https://www.anthropic.com/privacy）<br>
-・OpenAI GPT-4o（https://openai.com/privacy）<br>
+・OpenAI（https://openai.com/privacy）<br>
 ・Google Gemini（https://policies.google.com/privacy）<br>
 ・Google Cloud の AI サービス（当方が運用するサーバー経由で利用。https://cloud.google.com/terms/cloud-privacy-notice）<br>
 利用するサービスは、アプリのバージョンにより異なります。機能向上のため、対応サービスが予告なく変更される場合があります。</p>
