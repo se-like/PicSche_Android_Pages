@@ -18,7 +18,7 @@
 <body>
 
 <h1>Privacy Policy</h1>
-<p class="updated">Last updated: August 12, 2026</p>
+<p class="updated">Last updated: November 2, 2026</p>
 
 <p>PicSche ("this app") respects your privacy and takes the protection of personal information seriously. This Privacy Policy explains what information we collect and how we use and protect it.</p>
 
@@ -47,7 +47,9 @@ Disabling: If you turn off notifications for PicSche in Android settings, we wil
 <ul>
   <li>Images selected or captured by the user, or PDFs selected by the user</li>
   <li>Instructions for image/PDF analysis (including text you enter in the "Customization" field)</li>
-  <li>For free-tier usage we may manage usage on our server and send a device identifier; usage count and the relevant month may be stored on our server.</li>
+  <li>Usage (free uses and charge balance) is managed on our server. Each time you analyze, check your balance, or a purchase is applied, the app sends an account identifier (a random ID issued by Google Firebase Authentication; it does not include your name or email address) and a device identifier (a random string that does not identify you) to our API, and the usage count is stored on our server linked to them. Free uses are counted in total per account and per device, so reinstalling the app or creating a new account does not restore them.</li>
+  <li>To prevent abuse, we use Google Firebase App Check to confirm that requests come from the genuine app (using the Google Play Integrity API). For this check, information about the integrity of your device and the app is sent to Google.</li>
+  <li>When you purchase a charge, the purchase information (the Google Play purchase token, order ID, and product ID) is sent to our server, which verifies it with Google Play before adding it to your balance. To match a purchase to your account, a value derived from your account identifier (which cannot be turned back into the ID) is included in the purchase.</li>
   <li>We may save usage and purchase-related records to our systems. We retain them for a certain period as needed for fraud prevention and service operation.</li>
 </ul>
 <p><strong>(2) Purpose of Transmission</strong><br>
@@ -91,7 +93,7 @@ This app does not display ads.</p>
   <li>Extracted schedule information: Deleted from the app after calendar registration</li>
   <li>Registered calendar events: Stored in the OS default calendar app (until the user deletes them)</li>
 </ul>
-<p>This app does not store images or schedule content on servers. We may store or retain the following: free-tier usage (usage count and month linked to a device identifier); push notification identifiers on Google's service; usage and purchase-related records in our systems for a certain period for fraud prevention and service operation.</p>
+<p>This app does not store images or schedule content on servers. We may store or retain the following: usage (free uses and charge balance) and purchase verification records (order ID, product, time applied), linked to an account identifier and a device identifier; push notification identifiers on Google's service; usage and purchase-related records in our systems for a certain period for fraud prevention and service operation.</p>
 
 <h2>5. Data Sharing</h2>
 <p>We do not share your information with third parties except: when required by law, when you have given consent, as described in "Third-Party Services" (AI analysis use) above.</p>
